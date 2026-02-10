@@ -1,4 +1,4 @@
-# Backend Basics (Beginner Notes)
+# Backend Basics 
 
 ## What is a Backend Server?
 - A backend server is a computer that lets the client talk to the database.
