@@ -14,5 +14,8 @@
  - Communicate with databases
 
 # Relationship:
+
  Node.js  -> provides the runtime and system-level capabilities
+ 
  Express  -> simplifies building HTTP servers on top of Node.js
+
