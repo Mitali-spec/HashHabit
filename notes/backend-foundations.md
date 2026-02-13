@@ -24,6 +24,17 @@
 
 ---
 
+## What is a HTTP method
+
+HTTP methods are actions in an HTTP request that tell the server what to do with a resource (data).
+
+If the request contains GET, it means:
+“Hey server, please send me the data.”
+
+If the request contains POST, it means:
+“Hey server, I am sending you data, please process or store it."
+
+
 ## GET vs POST
 - **GET**
   - Used to fetch data from the server.
