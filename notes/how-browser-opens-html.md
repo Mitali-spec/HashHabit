@@ -15,8 +15,11 @@
  - No GET or POST requests are sent
 
 # In this case:
+
  Client  -> Browser
+ 
  Server  -> None (my computer is NOT acting as a server)
+ 
 
 # Definition of a real server:
  A server is a computer (or program) that:
