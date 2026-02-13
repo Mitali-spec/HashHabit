@@ -65,21 +65,36 @@
 # ------------------------------------------------------------
 
  User fills login form
+ 
    ↓
+   
  Browser sends HTTP request (POST)
+ 
    ↓
+   
  Server program (Node.js + Express)
  (listening on a port)
+ 
    ↓
+   
  Server validates and processes data
+ 
    ↓
+   
  Server communicates with database
+ 
    ↓
+   
  Database stores data
+ 
    ↓
+   
  Server sends response
+ 
    ↓
+   
  Browser shows result
+ 
 
 # ------------------------------------------------------------
 # Final Summary
