@@ -1,8 +1,8 @@
-# JavaScript Observations and Learnings
+#JavaScript Observations and Learnings
 
 
 
-# let vs var
+#let vs var
 
 
  While experimenting in the browser console,
@@ -14,7 +14,7 @@
  console usage.
 
 
-# In real-world programs, let and var differ in:
+#In real-world programs, let and var differ in:
 
  - Scope
  - Redeclaration rules
@@ -26,14 +26,14 @@
 
 
 
-# const Arrays and Stack Behavior
+#const Arrays and Stack Behavior
 
 
  Arrays declared with const cannot be reassigned,
  but their elements can still be modified.
 
 
-# Example methods:
+#Example methods:
 
 - push() : adds elements to the end
  - pop()  : removes elements from the end
@@ -44,20 +44,20 @@
 
 
 
-# Primitive Data Types in JavaScript
+#Primitive Data Types in JavaScript
 
 
-# JavaScript primitive data types include:
+#JavaScript primitive data types include:
 
-# - string
-# - number
-# - boolean
-# - null
-# - undefined
+#- string
+#- number
+#- boolean
+#- null
+#- undefined
 
 
 
-# Understanding null
+#Understanding null
 
 
  null is a primitive data type that represents
@@ -77,16 +77,16 @@
 
 
 
-# undefined vs null
+#undefined vs null
 
 
-# undefined:
+#undefined:
 
 - Variable is declared
 - No value has been assigned yet
 
 
-# null:
+#null:
 
 - Explicitly assigned by the developer
 - Indicates an empty or unknown value
