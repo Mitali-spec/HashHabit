@@ -1,4 +1,4 @@
-###JavaScript Observations and Learnings
+#JavaScript Observations and Learnings
 
 While experimenting with JavaScript in the browser console, I observed that let appears to work similarly to var for basic variable declaration and updating.
 
