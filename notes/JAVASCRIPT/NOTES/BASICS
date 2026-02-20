@@ -90,3 +90,57 @@
 
 - Explicitly assigned by the developer
 - Indicates an empty or unknown value
+
+
+# ==================================================
+
+# JavaScript Functions – Core Concepts
+
+
+# Block of Code
+
+ Anything written inside { } is called a block of code.
+ A function is also a block of code that is written
+ once and executed whenever it is called.
+
+
+
+# Parameters vs Arguments
+
+
+# Arguments:
+
+- Values passed to a function when calling it
+
+
+# Parameters:
+- Variables defined inside the function
+  to receive those values
+
+
+
+# Arrow Functions
+
+
+ An arrow function is a shorter and cleaner way
+ to write functions in JavaScript.
+
+
+# Example:
+
+
+const square = x => x * x;
+
+
+
+# Calculator Logic (Arrow Function)
+
+const calculate = (a, b, operator) => {
+   if (operator === "+") return a + b;
+   if (operator === "-") return a - b;
+   if (operator === "*") return a * b;
+   if (operator === "/") return a / b;
+   return "Invalid operator";
+ };
+
+
