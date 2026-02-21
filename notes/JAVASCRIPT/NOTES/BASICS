@@ -144,3 +144,63 @@ const calculate = (a, b, operator) => {
  };
 
 
+# ==================================================
+# ARRAY OF OBJECTS (JavaScript)
+# ==================================================
+
+# Example of an array of objects
+
+Used commonly in backend to store multiple records
+
+
+let users = [
+  { name: "Naruto", role: "admin" },
+  { name: "Sakura", role: "editor" },
+  { name: "Sasuke", role: "user" }
+];
+
+
+
+# FRONTEND, BACKEND & DATABASE COMMUNICATION
+
+
+ Communication between frontend and database
+ happens via the backend.
+
+
+ Communication between frontend and backend
+ happens using JSON.
+
+
+ JSON is the standard data format used
+ to send and receive data.
+
+
+
+# JSON EXAMPLE
+
+
+# Normal JavaScript Object
+
+let user = {
+  name: "Mitali",
+  age: 20
+};
+
+
+# JSON Version
+
+{
+  "name": "Temari",
+  "age": 20
+}
+
+
+
+# JSON RULES
+
+
+
+# 1. Keys must be inside double quotation marks
+# 2. JSON contains data only
+# 3. No functions or logic are allowed in JSON
