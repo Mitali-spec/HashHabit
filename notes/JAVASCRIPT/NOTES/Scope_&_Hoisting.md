@@ -19,6 +19,8 @@
 
  A variable declared at the top level of a file
  is in the global scope.
+
+ 
  Global variables are accessible everywhere.
 
 
@@ -26,6 +28,8 @@
 
 
  let x = 10;
+
+ 
  This variable can be accessed inside functions,
  blocks, and anywhere in the file.
 
@@ -41,8 +45,13 @@
 
 
  function test() {
+
+ 
    let y = 5;
+
+   
  }
+ 
 
 y cannot be accessed outside the function.
 
@@ -53,15 +62,23 @@ y cannot be accessed outside the function.
 
 
  Block scope is created using curly braces { }.
+
+ 
  Variables declared using let and const
  exist only inside that block.
+
 
 # Example:
 
 
  if (true) {
+
+ 
    let a = 10;
+
+   
  }
+
 
 a is NOT accessible outside the block.
 
@@ -79,7 +96,11 @@ var is NOT block scoped.
 
 
  if (true) {
+
+ 
    var b = 20;
+
+   
  }
 
 
@@ -114,7 +135,11 @@ NOT the value assignment.
 # Example:
 
  console.log(x);
+
+ 
  var x = 10;
+
+ 
 
 # Expected:    Error
 
