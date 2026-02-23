@@ -141,10 +141,10 @@ NOT the value assignment.
 
  
 
-# Expected:    Error
+ Expected:    Error
 
 
-# Actual:       undefined
+ Actual:       undefined
 
 
 
@@ -169,11 +169,11 @@ NOT the value assignment.
  let y = 5;
 
 
-# Result :        Error
+ Result :        Error
 
 
-# This happens because let does not allow
-# access to the variable before declaration.
+ This happens because let does not allow
+ access to the variable before declaration.
 
 
 
