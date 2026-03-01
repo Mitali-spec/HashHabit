@@ -37,28 +37,70 @@ Behavior:
 
 
 function login(password) {
+
+
   if (password === "1234") {
+
+  
     return new Promise((resolve, reject) => {
+
+    
       setTimeout(() => {
+
+      
         resolve("success");
+
+        
       }, 6000);
+
+      
     });
+
+    
   } else {
+
+  
     return new Promise((resolve, reject) => {
+
+    
       setTimeout(() => {
+
+      
         reject("failure");
+
+        
       }, 6000);
+
+      
     });
+
+    
   }
+
+  
 }
 
+
 login("1234")
+
+
   .then((message) => {
+
+  
     console.log(message);
+
+    
   })
+
+  
   .catch((error) => {
+
+  
     console.log(error);
+
+    
   });
+
 
 
 ## Explanation
