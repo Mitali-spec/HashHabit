@@ -1,72 +1,88 @@
-const express=require("express");
-const app=express();
+// ===============================
+// IMPORTS
+// ===============================
+const express = require("express");
+const mongoose = require("mongoose");
 
-const mongoose=require("mongoose");
+const app = express();
 
-//when user types url, fetch website
+// ===============================
+// MIDDLEWARE
+// ===============================
+app.use(express.urlencoded({ extended: true }));
 
-app.use(express.urlencoded({extended: true}));
-app.get("/", function(req,res){
-    res.sendFile(__dirname + "/signup_and_login.html");
-})
-app.listen(3000,function(){
-    console.log("server is listening on port 3000");
-})
-
-
-//connect node.js to mongodb
+// ===============================
+// DATABASE CONNECTION
+// ===============================
 mongoose.connect("mongodb://127.0.0.1:27017/username_and_password")
-.then(() => {
-    console.log("connected");
-})
-.catch(err => {
-    console.log(err);
-})
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.log(err));
 
-//create schema
-const schema= new mongoose.Schema({
-    username:String,
-    password:String
+// ===============================
+// SCHEMA & MODEL
+// ===============================
+const userSchema = new mongoose.Schema({
+    username: String,
+    password: String
 });
-//create model
-const user = mongoose.model("user",schema);
 
-//when user clicks signup submit data to mongodb
+const User = mongoose.model("User", userSchema);
 
-app.post("/signup", async function(req,res){
-    const username=req.body.username;
-   
+// ===============================
+// ROUTES
+// ===============================
+
+// Serve HTML page
+app.get("/", function(req, res) {
+    res.sendFile(__dirname + "/signup_and_login.html");
+});
+
+// SIGNUP
+app.post("/signup", async function(req, res) {
+
+    const username = req.body.username;
     const password = req.body.password;
-    
-    //to ensure that username is unique
-    const existing_user=await user.findOne({username:username});
-    if(existing_user.username===username){
-        res.send("username already exists");
-    }
-    
-    const newuser=new user({
-        username:username,
-        password:password
 
+    // Check if user already exists
+    const existingUser = await User.findOne({ username: username });
+
+    if (existingUser) {
+        return res.send("Username already exists");
+    }
+
+    // Create new user
+    const newUser = new User({
+        username: username,
+        password: password
     });
-    await newuser.save();
-    res.send("data stored");
-})
-//LOGIN LOGIC
-app.post("/login",async function(req,res){
-    const username=req.body.username;
-    const password=req.body.password;
-    const existing_user=await user.findOne({username:username});
-    if(!existing_user){
-        res.send("user not found");
-    }
-    if(existing_user.password===password){
-        res.send("login successful");
 
-    }
-    else{
-        res.send("wrong password");
+    await newUser.save();
+
+    res.send("Signup successful");
+});
+
+// LOGIN
+app.post("/login", async function(req, res) {
+
+    const username = req.body.username;
+    const password = req.body.password;
+
+    const existingUser = await User.findOne({ username: username });
+
+    if (!existingUser) {
+        return res.send("User not found");
     }
 
+    if (existingUser.password === password) {
+        res.send("Login successful");
+    } else {
+        res.send("Wrong password");
+    }
+});
 
+// ===============================
+// SERVER
+// ===============================
+app.listen(3000, function() {
+    console.log("Server running on port 3000");
 });
