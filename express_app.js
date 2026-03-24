@@ -11,10 +11,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/username_and_password")
     console.log(err);
 });
 
-
-
-
-
 app.use(express.urlencoded({ extended: true }));
 
 
