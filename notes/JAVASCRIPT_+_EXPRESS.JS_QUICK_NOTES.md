@@ -4,24 +4,24 @@
 
 * `JSON.stringify()` → converts **JavaScript object → JSON string**
 * `response.json()` → converts **JSON → JavaScript object**
-* 👉 JSON itself is just a **format**, not a function
+*  JSON itself is just a **format**, not a function
 
 ---
 
-## 🔹 Fetch → Backend Flow
+##  Fetch → Backend Flow
 
 ```js
 body: JSON.stringify({ add_task: task })
 ```
 
-👉 Converts JavaScript object into JSON before sending to backend
+ Converts JavaScript object into JSON before sending to backend
 
 ```js
 app.use(express.json());
 ```
 
-👉 Converts incoming JSON → JavaScript object
-👉 Stored in:
+ Converts incoming JSON → JavaScript object
+ Stored in:
 
 ```js
 req.body
@@ -29,23 +29,23 @@ req.body
 
 ---
 
-## 🔹 Response Object
+##  Response Object
 
 ```js
 let response = await fetch(...);
 ```
 
-👉 `response` stores the **response sent by server to frontend JS**
+ `response` stores the **response sent by server to frontend JS**
 
 ---
 
-## 🔹 DOM Manipulation
+##  DOM Manipulation
 
 ```js
 element.setAttribute(name, value);
 ```
 
-👉 Sets an attribute on an HTML element
+ Sets an attribute on an HTML element
 
 Example:
 
@@ -55,13 +55,13 @@ img.setAttribute("src", "image.png");
 
 ---
 
-## 🔹 HTTP Methods Mapping
+##  HTTP Methods Mapping
 
 ```js
 fetch("/task", { method: "DELETE" });
 ```
 
-👉 Handled in backend by:
+ Handled in backend by:
 
 ```js
 app.delete("/task", (req, res) => {
@@ -71,24 +71,24 @@ app.delete("/task", (req, res) => {
 
 ---
 
-## 🔹 Prompt Input
+##  Prompt Input
 
 ```js
 prompt("Enter your name:");
 ```
 
-👉 Shows popup in browser
-👉 User enters input → returned value stored in variable
+ Shows popup in browser
+ User enters input → returned value stored in variable
 
 ---
 
-## 🔹 Update Task Example
+##  Update Task Example
 
 ```js
 let newValue = prompt("Update task:", li.firstChild.textContent);
 ```
 
-👉 When user clicks update button:
+ When user clicks update button:
 
 * Popup appears with current task
 * User edits it
@@ -100,7 +100,7 @@ li.firstChild.textContent
 
 ---
 
-## 🔥 Full Communication Flow
+##  Full Communication Flow
 
 1. Frontend sends data using `fetch()`
 2. `JSON.stringify()` → JS → JSON
@@ -111,7 +111,7 @@ li.firstChild.textContent
 
 ---
 
-## ⚡ One-Line Summary
+## One-Line Summary
 
-👉 **Frontend ↔ Backend Communication =**
+ **Frontend ↔ Backend Communication =**
 `JS → JSON → JS → JSON → JS`
